@@ -20,3 +20,14 @@ services:
       - "54321:80"
     depends_on:
       - postgres
+
+  mongo:
+    image: mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: leonardo
+      MONGO_INITDB_ROOT_PASSWORD: senha123
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./mongo-data:/var/lib/mongo/data
+

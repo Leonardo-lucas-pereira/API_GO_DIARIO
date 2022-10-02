@@ -19,6 +19,7 @@ func ConfigRoutes(router *gin.Engine) *gin.Engine {
 		{
 			userauth.GET("/list", controllers.ListUsers)
 			user.GET("/my_profile", controllers.GetUser)
+			user.POST("/pages", controllers.PublicPages)
 		}
 
 		login := main.Group("login")
